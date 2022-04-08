@@ -3,11 +3,32 @@
 $font-family-sans-serif: 'Roboto', 'Padauk';
 // $primary: #6675df;
 $light: #f1f2f7;
+$semi-light: #f3f6f9;
 $dark: #353c48;
-$border-radius: 0.8rem;
+$border-radius: 8px;
+
 
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import '../vendor/feather-icons-web/feather.css';
+@import '../vendor/select-two/select2.min.css';
 
 @import './sidebar';
+@import './emp';
+
+// ==== Global Css ====
+// .select2-container {
+//     border-bottom: 1px solid $secondary;
+// }
+
+.mb-7{
+    margin-bottom: 70px;
+}
+
+// .select2-container--default.select2-container--focus
+//     .select2-selection--multiple {
+//     border: 1px solid $semi-dark;
+// }
+
+

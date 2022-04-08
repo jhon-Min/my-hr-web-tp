@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="asset/css/style.css" />
   </head>
@@ -13,47 +13,57 @@
       <div class="header_toggle">
         <i class="bx bx-menu" id="header-toggle"></i>
       </div>
-      <div class="header_img">
-        <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
+
+      <div class="dropdown">
+        <a class="" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="header_img">
+            <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
+          </div>
+        </a>
+      
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
       </div>
+
+     
     </header>
+
     <div class="l-navbar" id="nav-bar">
       <nav class="nav">
         <div>
           <a href="#" class="nav_logo">
-            <i class="bx bx-layer nav_logo-icon"></i>
+            <i class="bx bx-layer nav_logo-icon text-dark fs-3"></i>
             <span class="nav_logo-name">My HR</span>
           </a>
           <div class="nav_list">
-            <a href="#" class="nav_link active">
-                <i class="fa-solid fa-house-chimney text-dark"></i>
+            <a href="#" class="nav_link active-item">
+                <i class="fa-solid fa-house"></i>
                 <span class="nav_name">Dashboard</span>
             </a>
-            <a href="#" class="nav_link">
-              <i class="bx bx-user nav_icon"></i>
-              <span class="nav_name">Users</span>
+            <a href="employee-create.html" class="nav_link">
+              <i class="fa-solid fa-users"></i>
+              <span class="nav_name">Employees</span>
             </a>
             <a href="#" class="nav_link">
-              <i class="bx bx-message-square-detail nav_icon"></i>
-              <span class="nav_name">Messages</span>
+              <i class="fa-solid fa-book-open"></i>
+              <span class="nav_name">Attendance</span>
             </a>
             <a href="#" class="nav_link">
-              <i class="bx bx-bookmark nav_icon"></i>
-              <span class="nav_name">Bookmark</span>
+              <i class="fa-solid fa-building-user"></i>
+              <span class="nav_name">Department</span>
             </a>
             <a href="#" class="nav_link">
-              <i class="bx bx-folder nav_icon"></i>
-              <span class="nav_name">Files</span>
-            </a>
-            <a href="#" class="nav_link">
-              <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
-              <span class="nav_name">Stats</span>
+              <i class="fa-solid fa-users-gear"></i>
+              <span class="nav_name">Role</span>
             </a>
           </div>
         </div>
         <a href="#" class="nav_link">
-          <i class="bx bx-log-out nav_icon"></i>
-          <span class="nav_name">SignOut</span>
+            <i class="feather-log-out text-danger fw-bold"></i>
+            <span class="text-danger">SignOut</span>
         </a>
       </nav>
     </div>
@@ -64,7 +74,7 @@
     <!--Container Main end-->
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="asset/js/sidebar.js"></script>
   </body>
 </html>

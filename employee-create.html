@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Employee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.2.0/dist/select2-bootstrap-5-theme.min.css" />
+
+    <!-- Date Range Picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+</head>
+
+<body id="body-pd" class="bg-light">
+    <header class="header bg-dark" id="header">
+        <div class="header_toggle">
+            <i class="bx bx-menu" id="header-toggle"></i>
+        </div>
+
+        <div class="dropdown">
+            <a class="" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="header_img">
+                    <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
+                </div>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav_logo">
+                    <i class="bx bx-layer nav_logo-icon text-dark fs-3"></i>
+                    <span class="nav_logo-name">My HR</span>
+                </a>
+                <div class="nav_list">
+                    <a href="index.html" class="nav_link">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link active-item">
+                        <i class="fa-solid fa-users"></i>
+                        <span class="nav_name">Employees</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span class="nav_name">Attendance</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="fa-solid fa-building-user"></i>
+                        <span class="nav_name">Department</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <span class="nav_name">Role</span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="nav_link">
+                <i class="feather-log-out text-danger fw-bold"></i>
+                <span class="text-danger">SignOut</span>
+            </a>
+        </nav>
+    </div>
+    <!--Container Main start-->
+    <div class="min-vh-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="my-4 d-flex align-items-baseline">
+                    <div class="me-2">
+                        <span class="fs-4">Employees</span>
+                        <span class="fs-4 ms-1 text-muted">|</span>
+                    </div>
+                    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Employees</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Add Employee
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+               
+                <div class="col-12">
+                    <div class="card emp-card shadow-sm">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-4">Add Employee</h6>
+                            <form action="">
+                                <div class="row g-5">
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-5">
+                                            <input type="text" class="form-control" placeholder="Employee ID"
+                                                required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <input type="email" class="form-control" placeholder="Email" required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <input type="password" class="form-control" placeholder="Password"
+                                                required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <input type="text" class="form-control" placeholder="NRC" required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <input type="text" id="doj" class="form-control" placeholder="Joining Date"
+                                                required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <select class="form-select" id="single-select-clear-field" data-placeholder="Choose one thing">
+                                                <option></option>
+                                                <option>Reactive</option>
+                                                <option>Solution</option>
+                                                <option>Conglomeration</option>
+                                                <option>Algoritm</option>
+                                                <option>Holistic</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-5">
+                                            <input type="text" class="form-control" placeholder="Your Name" required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <input type="number" class="form-control" placeholder="Phone" required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <input type="number" class="form-control" placeholder="Pin Code" required />
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option>--- Gender ---</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-5">
+                                            <input type="text" id="bd" class="form-control" placeholder="Birthday"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Container Main end-->
+
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Datarange Picker JavaScript -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Select 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="asset/js/app.js"></script>
+    <script src="asset/js/sidebar.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#bd").daterangepicker({
+                singleDatePicker: true,
+                autoApply: true,
+                showDropdowns: true,
+                maxDate: moment(),
+                locale: {
+                    format: "YYYY-MM-DD",
+                },
+            });
+
+            $("#doj").daterangepicker({
+                singleDatePicker: true,
+                autoApply: true,
+                showDropdowns: true,
+                locale: {
+                    format: "YYYY-MM-DD",
+                },
+            });
+
+           
+        });
+
+       
+    </script>
+</body>
+
+</html>

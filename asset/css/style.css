@@ -9,6 +9,7 @@
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '../vendor/feather-icons-web/feather.css';
 @import '../vendor/select-two/select2.min.css';
+@import '../../node_modules/dropzone/dist/dropzone.css';
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 :root {
   --bs-blue: #0d6efd;
@@ -12595,7 +12596,7 @@ textarea.form-control-lg {
   --first-color-light: #afa5d9;
   --body-font: "Nunito", sans-serif;
   --normal-font-size: 1rem;
-  --z-fixed: 100;
+  --z-fixed: 2001;
 }
 
 *,
@@ -12841,6 +12842,10 @@ a {
   top: 540px !important;
 }
 
+.file-upload-icon {
+  font-size: 50px;
+}
+
 .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
   display: inline-block;
 }
@@ -12854,4 +12859,9 @@ a {
   border-radius: 0;
   border: none;
   border-bottom: 1px solid #6c757d !important;
+}
+
+.dropzone {
+  border: 1px solid #f1f2f7;
+  background: #f1f2f7;
 }

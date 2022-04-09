@@ -13,6 +13,7 @@ $border-radius: 0px;
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '../vendor/feather-icons-web/feather.css';
 @import '../vendor/select-two/select2.min.css';
+@import '../../node_modules/dropzone/dist/dropzone.css';
 
 @import './sidebar';
 @import './emp';
@@ -30,6 +31,11 @@ $border-radius: 0px;
     top: 540px !important;
 }
 
+.file-upload-icon{
+    font-size: 50px;
+}
+
+// ==== Select 2 ====
  .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice{
      display: inline-block;
  }
@@ -44,4 +50,9 @@ $border-radius: 0px;
      border-bottom: 1px solid $secondary !important;
  }
 
+ // ==== Dropzone ====
+.dropzone{
+    border: 1px solid $light;
+    background: $light;
+}
 

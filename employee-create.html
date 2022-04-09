@@ -10,9 +10,10 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.2.0/dist/select2-bootstrap-5-theme.min.css" />
 
-    <!-- Date Range Picker -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" href="asset/css/style.css" />
+    <!-- Flat Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="asset/css/style.css">
 </head>
 
 <body id="body-pd" class="bg-light">
@@ -95,7 +96,14 @@
                 <div class="col-12">
                     <div class="card emp-card shadow-sm">
                         <div class="card-body">
-                            <h6 class="fw-bold mb-4">Add Employee</h6>
+                            <div class="mb-4 d-flex justify-content-between align-items-center">
+                                <h5 class="fw-bold">Add Employee</h5>
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fa-solid fa-book me-1"></i>
+                                    <span>Lists</span>
+                                </button>
+                            </div>
+
                             <form action="">
                                 <div class="row g-5">
                                     <div class="col-12 col-md-6">
@@ -118,12 +126,11 @@
                                         </div>
 
                                         <div class="mb-5">
-                                            <input type="text" id="doj" class="form-control" placeholder="Joining Date"
-                                                required />
+                                            <input type="text" class="form-control bd" placeholder="Birth Date">
                                         </div>
 
-                                        <div class="mb-5">
-                                            <select class="form-select" id="single-select-clear-field" data-placeholder="Choose one thing">
+                                        <div class="">
+                                            <select class="form-select single-select"  data-placeholder="Choose one thing">
                                                 <option></option>
                                                 <option>Reactive</option>
                                                 <option>Solution</option>
@@ -148,17 +155,43 @@
                                         </div>
 
                                         <div class="mb-5">
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option>--- Gender ---</option>
+                                            <select class="form-select" data-placeholder="Choose one thing">
                                                 <option value="1">Male</option>
                                                 <option value="2">Female</option>
                                             </select>
                                         </div>
 
                                         <div class="mb-5">
-                                            <input type="text" id="bd" class="form-control" placeholder="Birthday"
-                                                required />
+                                            <input type="text" class="form-control doj" placeholder="Joining Date">
                                         </div>
+
+                                        <div class="">
+                                            <select class="form-select single-select"  data-placeholder="Is Present?">
+                                                <option></option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="">
+                                        <select class="form-select select-custom-multiple"  data-placeholder="Choose Role" multiple>
+                                            <option></option>
+                                            <option>Reactive</option>
+                                            <option>Solution</option>
+                                            <option>Conglomeration</option>
+                                            <option>Algoritm</option>
+                                            <option>Holistic</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <textarea class="form-control" rows="3" placeholder="Address"></textarea>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <a class="btn btn-danger ">Cancel</a>
+                                        <button class="btn btn-primary px-5 ms-2">Save</button>                                     
                                     </div>
                                 </div>
                             </form>
@@ -174,9 +207,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Datarange Picker JavaScript -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Flat Picker JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- Select 2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -184,30 +216,29 @@
     <script src="asset/js/app.js"></script>
     <script src="asset/js/sidebar.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#bd").daterangepicker({
-                singleDatePicker: true,
-                autoApply: true,
-                showDropdowns: true,
-                maxDate: moment(),
-                locale: {
-                    format: "YYYY-MM-DD",
-                },
-            });
+       $(".bd").flatpickr({
+           maxDate: "today",
+           dateFormat: "d.m.Y",
+       });
 
-            $("#doj").daterangepicker({
-                singleDatePicker: true,
-                autoApply: true,
-                showDropdowns: true,
-                locale: {
-                    format: "YYYY-MM-DD",
-                },
-            });
+       $(".doj").flatpickr({
+           dateFormat: "d.m.Y",
+       });
 
-           
+       $( '.select-custom-multiple' ).select2( {
+            theme: "bootstrap-5",
+            width: '100%',
+            placeholder: $( this ).data( 'placeholder' ),
+            closeOnSelect: true,
+        } );
+
+        $(".single-select").select2({
+            theme: "bootstrap-5",
+            width: '100%',
+            placeholder: $(this).data("placeholder"),
+            dropdownCssClass: "select2--small",
+            //   allowClear: true,
         });
-
-       
     </script>
 </body>
 

@@ -5,7 +5,7 @@ $font-family-sans-serif: 'Roboto', 'Padauk';
 $light: #f1f2f7;
 $semi-light: #f3f6f9;
 $dark: #353c48;
-$border-radius: 8px;
+$border-radius: 0px;
 
 
 
@@ -26,9 +26,22 @@ $border-radius: 8px;
     margin-bottom: 70px;
 }
 
-// .select2-container--default.select2-container--focus
-//     .select2-selection--multiple {
-//     border: 1px solid $semi-dark;
-// }
+.flatpickr-calendar.open{
+    top: 540px !important;
+}
+
+ .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice{
+     display: inline-block;
+ }
+
+ .select2-container--bootstrap-5.select2-container--open .select2-selection{
+     box-shadow: none;
+ }
+
+ .select2-container--bootstrap-5 .select2-selection{
+     border-radius: 0;
+     border: none ;
+     border-bottom: 1px solid $secondary !important;
+ }
 
 

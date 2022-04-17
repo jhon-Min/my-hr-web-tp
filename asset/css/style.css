@@ -12713,7 +12713,7 @@ a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #353c48;
-  font-size: 18px;
+  font-size: 17px;
 }
 .nav_link span {
   color: #353c48;
@@ -12735,7 +12735,7 @@ a {
 
 .nav_link {
   position: relative;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.5rem;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -12838,8 +12838,13 @@ a {
   margin-bottom: 70px;
 }
 
-.flatpickr-calendar.open {
-  top: 540px !important;
+.emp-card .form-floating > label {
+  padding-left: 0px;
+}
+
+.daterangepicker, .flatpickr-calendar {
+  margin-top: -55px !important;
+  z-index: 2000 !important;
 }
 
 .file-upload-icon {

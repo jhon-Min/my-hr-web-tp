@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Department</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.2.0/dist/select2-bootstrap-5-theme.min.css" />
+
+    <!-- Flat Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="asset/css/style.css">
+      <!-- Daterange picker -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- <style>
+        .daterangepicker{
+            top: 310px !important;
+        }
+    </style> -->
+</head>
+
+<body class="bg-light">
+    <div class="form-floating">
+        <input type="email" class="form-control time-picker" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Check Out</label>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script> -->
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- Flat Picker JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Drop Zone -->
+    <script src="node_modules/dropzone/dist/dropzone-min.js"></script>
+
+    <!-- Daterange Picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Select 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="asset/js/app.js"></script>
+    <script src="asset/js/sidebar.js"></script>
+    <script>
+       $(".dt").flatpickr({
+           dateFormat: "d-m-Y",
+       });
+
+       $(".time-picker").daterangepicker({
+                "singleDatePicker": true,
+                "timePicker": true,
+                "timePicker24Hour": true,
+                "timePickerSeconds": true,
+                "autoApply": true,
+                "locale": {
+                    "format": "HH:mm:ss",
+                }
+            }).on('show.daterangepicker', function(ev, picker) {
+                picker.container.find('.calendar-table').hide();
+        });;
+
+    </script>
+</body>
+
+</html>

@@ -27,9 +27,19 @@ $border-radius: 0px;
     margin-bottom: 70px;
 }
 
-.flatpickr-calendar.open{
-    top: 540px !important;
+.emp-card .form-floating > label{
+    padding-left: 0px;
 }
+
+// .flatpickr-calendar.open{
+//     top: 540px !important;
+// }
+
+.daterangepicker, .flatpickr-calendar{
+    margin-top: -55px !important;
+    z-index: 2000 !important;
+}
+
 
 .file-upload-icon{
     font-size: 50px;
